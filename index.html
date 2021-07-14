@@ -113,11 +113,26 @@
 
 <!--  chat widget start  -->
 <!--  chat button start  -->
-<a id="liveagent_button_online_5730D0000004Cc0" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5730D0000004Cc0')"><-- Online Chat Content --></a><div id="liveagent_button_offline_5730D0000004Cc0" style="display: none;"><-- Offline Chat Content --></div><script type="text/javascript">
-if (!window._laq) { window._laq = []; }
-window._laq.push(function(){liveagent.showWhenOnline('5730D0000004Cc0', document.getElementById('liveagent_button_online_5730D0000004Cc0'));
-liveagent.showWhenOffline('5730D0000004Cc0', document.getElementById('liveagent_button_offline_5730D0000004Cc0'));
-});</script>
+<a id="liveagent_button_online_5730D0000004Cc0" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5730D0000004Cc0')"><-- Online Chat Content --></a>
+<div id="liveagent_button_offline_5730D0000004Cc0" style="display: none;"><-- Offline Chat Content --></div>
+<script type="text/javascript">
+if (!window._laq) {
+	window._laq = [];
+}
+window._laq.push(function () {
+	var Digital = new Date()
+		var hour = Digital.getHours()
+		var day = Digital.getDay()
+		if ((day > 0 && day < 6) && (hour >= 8 && hour <= 15)) {
+			liveagent.showWhenOnline('5730D0000004Cc0', document.getElementById('liveagent_button_online_5730D0000004Cc0'));
+			liveagent.showWhenOffline('5730D0000004Cc0', document.getElementById('liveagent_button_offline_5730D0000004Cc0'));
+		} else {
+			liveagent.showWhenOnline('5730D0000004Cc0', document.getElementById('liveagent_button_offline_5730D0000004Cc0'));
+			liveagent.showWhenOffline('5730D0000004Cc0', document.getElementById('liveagent_button_offline_5730D0000004Cc0'));
+		}
+
+});
+<  / script >
 <!--  chat button end  -->
 
 
