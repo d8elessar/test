@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" crossorigin="use-credentials"/>
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />	<!--  web to case -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">	<!--  chat widget -->
+  </head>
+
+  <body>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+
+<!--  web to case start  -->
+    <form
+      action="https://online-druckgmbhcokg--dev.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+      method="POST"
+    >
+      <input type="hidden" name="orgid" value="00D0D0000008gWv" />
+      <input type="hidden" name="retURL" value="http://danke" />
+
+      <!--  ----------------------------------------------------------------------  -->
+      <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+      <!--  these lines if you wish to test in debug mode.                          -->
+      <!--  <input type="hidden" name="debug" value=1>                              -->
+      <!--  <input type="hidden" name="debugEmail" value="avalerio@annscom.de">     -->
+      <!--  ----------------------------------------------------------------------  -->
+
+      <label for="name">Kontaktname</label><input
+        id="name"
+        maxlength="80"
+        name="name"
+        size="20"
+        type="text"
+		required
+      /><br />
+
+      <label for="email">E-Mail</label><input
+        id="email"
+        maxlength="80"
+        name="email"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="subject">Thema</label>
+	  <select 
+	  id="subject" 
+	  name="subject" 
+	  required>
+        <option value="">– Ohne –</option>
+        <option value="Hilfe beim bestellen">Hilfe beim bestellen</option>
+        <option value="Aktueller Status">Aktueller Status</option>
+        <option value="Frage Druckdaten">Frage Druckdaten</option>
+        <option value="Hilfe erstellen Druckdaten">Hilfe erstellen Druckdaten</option>
+        <option value="Aktueller Status Zahlung">Aktueller Status Zahlung</option>
+        <option value="Reklamation">Reklamation</option>
+        <option value="Lieferadresse ändern">Lieferadresse ändern</option>
+        <option value="Rechnungsadresse aktualisieren">Rechnungsadresse aktualisieren</option>
+        <option value="DSVGO">DSVGO</option>
+        <option value="Verarbeitungsvertrag DSVGO">Verarbeitungsvertrag DSVGO</option>
+        <option value="Individuelles Angebot">Individuelles Angebot</option>
+        <option value="Portalzugang">Portalzugang</option>
+        <option value="Sonstiges">Sonstiges</option>
+	  </select><br />
+
+      <label for="description">Beschreibung</label><textarea name="description"></textarea><br />
+	
+		Order Number:<input  id="00N0D000001BlK9" maxlength="8" name="00N0D000001BlK9" size="20" type="text" /><br>
+
+		Customer Number:<input  id="00N0D000001BlKE" maxlength="8" name="00N0D000001BlKE" size="20" type="text" /><br>
+
+		Related Case Number:<input  id="00N0D000001BlKJ" maxlength="8" name="00N0D000001BlKJ" size="20" type="text" /><br>
+
+      <!--  hidden inputs/default values  -->
+      <input type="hidden" name="priority" id="priority" value="High" />
+
+      <!--  ----------------------------------------------------------------------  -->
+      <input type="submit" name="submit" />
+    </form>
+<!--  web to case end  -->
+
+
+<!--  chat widget start  -->
+<!--  chat button start  -->
+<a id="liveagent_button_online_5730D0000004Cc0" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5730D0000004Cc0')"><-- Online Chat Content --></a><div id="liveagent_button_offline_5730D0000004Cc0" style="display: none;"><-- Offline Chat Content --></div><script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('5730D0000004Cc0', document.getElementById('liveagent_button_online_5730D0000004Cc0'));
+liveagent.showWhenOffline('5730D0000004Cc0', document.getElementById('liveagent_button_offline_5730D0000004Cc0'));
+});</script>
+<!--  chat button end  -->
+
+
+
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://online-druckgmbhcokg--dev.my.salesforce.com',
+			'https://dev-online-druck-chat-dev.cs106.force.com/liveAgentSetupFlow',
+			gslbBaseURL,
+			'00D0D0000008gWv',
+			'Chat_Team',
+			{
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-cdg.salesforceliveagent.com/content',
+				deploymentId: '5720D0000004CRM',
+				buttonId: '5730D0000004Cc0',
+				baseLiveAgentURL: 'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Chat_Team',
+				isOfflineSupportEnabled: true
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://online-druckgmbhcokg--dev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+<!--  chat widget end  -->
+
+
+  </body>
+</html>
