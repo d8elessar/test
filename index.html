@@ -78,11 +78,30 @@
         type="hidden"
         name="captcha_settings"
         value='{"keyname":"DemoOnlineDruckDev2","fallback":"true","orgId":"00D0D0000008gWv","ts":""}'
+        <!--
+        Online
+        Druck
+        should
+        generate
+        their
+        own
+        recaptcha
+        key.
+        orgId
+        will
+        be
+        different
+        in
+        PROD
+        --
+      />
       />
       <!--  org  -->
       <input type="hidden" name="orgid" value="00D0D0000008gWv" />
+      <!-- orgId will be different in PROD -->
       <!--  return url  -->
       <input type="hidden" name="retURL" value="http://danke" />
+      <!-- form return page -->
 
       <!--  ----------------------------------------------------------------------  -->
       <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -141,9 +160,9 @@
 
       <!--  custom fields  -->
       Bestellnummer:<input
-        id="00N0D000001BlK9"
-        maxlength="8"
-        name="00N0D000001BlK9"
+        id="00N0D000001CUTc"
+        maxlength="7"
+        name="00N0D000001CUTc"
         size="20"
         type="text"
       /><br />
@@ -182,10 +201,18 @@
     <!--  chat button start  -->
     <a
       id="liveagent_button_online_5730D0000004Cc0"
-      href="javascript://Chat"
-      style="display: none"
-      onclick="liveagent.startChat('5730D0000004Cc0')"
-      ><-- Online Chat Content --></a
+      <!--
+      id
+      will
+      be
+      different
+      in
+      PROD
+      --
+    >
+      href="javascript://Chat" style="display: none"
+      onclick="liveagent.startChat('5730D0000004Cc0')" ><-- Online Chat Content
+      --></a
     >
     <div id="liveagent_button_offline_5730D0000004Cc0" style="display: none">
       <-- Offline Chat Content -->
@@ -198,21 +225,14 @@
         var Digital = new Date();
         var hour = Digital.getHours();
         var day = Digital.getDay();
-        if (day > 0 && day < 6 && hour >= 8 && hour <= 15) {
-          liveagent.showWhenOnline(
-            "5730D0000004Cc0",
-            document.getElementById("liveagent_button_online_5730D0000004Cc0")
-          );
-          liveagent.showWhenOffline(
-            "5730D0000004Cc0",
-            document.getElementById("liveagent_button_offline_5730D0000004Cc0")
-          );
-        } else {
-          liveagent.showWhenOffline(
-            "5730D0000004Cc0",
-            document.getElementById("liveagent_button_offline_5730D0000004Cc0")
-          );
-        }
+        liveagent.showWhenOnline(
+          "5730D0000004Cc0",
+          document.getElementById("liveagent_button_online_5730D0000004Cc0")
+        );
+        liveagent.showWhenOffline(
+          "5730D0000004Cc0",
+          document.getElementById("liveagent_button_offline_5730D0000004Cc0")
+        );
       });
     </script>
     <!--  chat button end  -->
@@ -254,6 +274,7 @@
         embedded_svc.settings.enabledFeatures = ["LiveAgent"];
         embedded_svc.settings.entryFeature = "LiveAgent";
 
+        //this will have different values in PROD
         embedded_svc.init(
           "https://online-druckgmbhcokg--dev.my.salesforce.com",
           "https://dev-online-druck-chat-dev.cs106.force.com/liveAgentSetupFlow",
@@ -277,7 +298,7 @@
         var s = document.createElement("script");
         s.setAttribute(
           "src",
-          "https://online-druckgmbhcokg--dev.my.salesforce.com/embeddedservice/5.0/esw.min.js"
+          "https://online-druckgmbhcokg--dev.my.salesforce.com/embeddedservice/5.0/esw.min.js" //this will have different values in PROD
         );
         s.onload = function () {
           initESW(null);
