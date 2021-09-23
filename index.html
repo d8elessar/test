@@ -205,8 +205,8 @@
       href="javascript://Chat"
       style="display: none"
       onclick="liveagent.startChat('5730D0000004Cc0')"
+      ><!-- Online Chat Content --></a
     >
-    </a>
     <div id="liveagent_button_offline_5730D0000004Cc0" style="display: none">
       <!-- Offline Chat Content -->
     </div>
@@ -215,9 +215,6 @@
         window._laq = [];
       }
       window._laq.push(function () {
-        var Digital = new Date();
-        var hour = Digital.getHours();
-        var day = Digital.getDay();
         liveagent.showWhenOnline(
           "5730D0000004Cc0",
           document.getElementById("liveagent_button_online_5730D0000004Cc0")
@@ -300,6 +297,17 @@
       } else {
         initESW("https://service.force.com");
       }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://c.la1-c1cs-cdg.salesforceliveagent.com/content/g/js/53.0/deployment.js"
+    ></script>
+    <script type="text/javascript">
+      liveagent.init(
+        "https://d.la1-c1cs-cdg.salesforceliveagent.com/chat",
+        "5720D0000004CRM",
+        "00D0D0000008gWv"
+      );
     </script>
     <!--  chat widget end  -->
   </body>
