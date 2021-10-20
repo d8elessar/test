@@ -26,8 +26,8 @@
 
     <!--  ----------------------------------------------------------------------  -->
     <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-    <!--  If necessary, please modify the charset parameter to specify the        -->
-    <!--  character set of your HTML page.                                        -->
+    <!--  If necessary, please modify the charset parameter to specify the -->
+    <!--  character set of your HTML page.     -->
     <!--  ----------------------------------------------------------------------  -->
 
     <!--  web to case -->
@@ -63,18 +63,20 @@
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  NOTE: Please add the following <FORM> element to your page.      -->
     <!--  ----------------------------------------------------------------------  -->
 
     <!--  web to case start  -->
     <form
       action="https://online-druckgmbhcokg--dev.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
       method="POST"
+      onsubmit="return validateForm()"
     >
       <!--  recaptcha  -->
-      <!--        Online        Druck        should        generate        their        own        recaptcha        key.        orgId        will.       be        different        in        PROD        -->
+      <!-- Online Druck should generate their own recaptcha key. orgId will be different in PROD -->
       <input
         type="hidden"
         name="captcha_settings"
@@ -90,8 +92,8 @@
 
       <!--  ----------------------------------------------------------------------  -->
       <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-      <!--  these lines if you wish to test in debug mode.                          -->
-      <!--  <input type="hidden" name="debug" value=1>                              -->
+      <!--  these lines if you wish to test in debug mode.     -->
+      <!--  <input type="hidden" name="debug" value=1>         -->
       <!--  <input type="hidden" name="debugEmail" value="avalerio@annscom.de">     -->
       <!--  ----------------------------------------------------------------------  -->
 
@@ -112,6 +114,7 @@
         name="email"
         size="20"
         type="text"
+        required
       /><br />
 
       <label for="subject">Thema</label>
@@ -130,7 +133,7 @@
       ><br />
 
       <label for="description">Beschreibung</label
-      ><textarea name="description"></textarea><br />
+      ><textarea name="description" required></textarea><br />
 
       <!--  custom fields  -->
       Auftragsnummer:<input
@@ -139,6 +142,7 @@
         name="00N0D000001CUTc"
         size="20"
         type="text"
+        class="auftragsnummer"
       /><br />
 
       Kundennummer:<input
@@ -210,6 +214,19 @@
         outline: 1px solid #005290;
       }
     </style>
+
+    <script type="text/javascript">
+      function validateForm() {
+        let x = $("#subject").value;
+        let y = $(".auftragsnummer").value;
+        if (x == "vorhandene Bestellung" && !y) {
+          alert(
+            "Auftragsnummer wird benötigt, wenn 'vorhandene Bestellung' ausgewählt ist."
+          );
+          return false;
+        }
+      }
+    </script>
 
     <script
       type="text/javascript"
