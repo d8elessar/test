@@ -217,8 +217,8 @@
 
     <script type="text/javascript">
       function validateForm() {
-        let x = $("#subject").value;
-        let y = $(".auftragsnummer").value;
+        let x = document.querySelector("#subject").value;
+        let y = document.querySelector(".auftragsnummer").value;
         if (x == "vorhandene Bestellung" && !y) {
           alert(
             "Auftragsnummer wird benötigt, wenn 'vorhandene Bestellung' ausgewählt ist."
